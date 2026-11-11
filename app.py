@@ -111,18 +111,18 @@ with col2:
         predictions = st.session_state.result["predictions"]
         # 将所有预测值格式化为保留两位小数的字符串
         formatted_predictions = {key: f"{float(value):.2f}" for key, value in predictions.items()}
-        st.markdown(f'<div class="metric-card">气体中CH4含量（%）: {formatted_predictions["气体中CH4含量（%）"]}</div>',
+        st.markdown(f'<div class="metric-card">热解气中CH4含量（%）: {formatted_predictions["热解气中CH4含量（%）"]}</div>',
                     unsafe_allow_html=True)
-        st.markdown(f'<div class="metric-card">气体中CO2含量（%）: {formatted_predictions["气体中CO2含量（%）"]}</div>',
+        st.markdown(f'<div class="metric-card">热解气中CO2含量（%）: {formatted_predictions["热解气中CO2含量（%）"]}</div>',
                     unsafe_allow_html=True)
-        st.markdown(f'<div class="metric-card">气体产率（%）: {formatted_predictions["气体产率（%）"]}</div>', unsafe_allow_html=True)
-        st.markdown(f'<div class="metric-card">液体产率（%）: {formatted_predictions["液体产率（%）"]}</div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="metric-card">热解气产率（%）: {formatted_predictions["热解气产率（%）"]}</div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="metric-card">焦油产率（%）: {formatted_predictions["焦油产率（%）"]}</div>', unsafe_allow_html=True)
         st.markdown(
-            f'<div class="metric-card">热解油中含氮化合物含量（%）: {formatted_predictions["热解油中含氮化合物含量（%）"]}</div>',
+            f'<div class="metric-card">焦油中含氮化合物含量（%）: {formatted_predictions["焦油中含氮化合物含量（%）"]}</div>',
             unsafe_allow_html=True)
-        st.markdown(f'<div class="metric-card">热解油中酚含量（%）: {formatted_predictions["热解油中酚含量（%）"]}</div>',
+        st.markdown(f'<div class="metric-card">焦油中酚含量（%）: {formatted_predictions["焦油中酚含量（%）"]}</div>',
                     unsafe_allow_html=True)
-        st.markdown(f'<div class="metric-card">热解油中酸含量（%）: {formatted_predictions["热解油中酸含量（%）"]}</div>',
+        st.markdown(f'<div class="metric-card">焦油中酸含量（%）: {formatted_predictions["焦油中酸含量（%）"]}</div>',
                     unsafe_allow_html=True)
     else:
         st.info("请输入参数并点击预测按钮获取结果")
